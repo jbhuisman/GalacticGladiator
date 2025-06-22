@@ -48,9 +48,21 @@ class SpecialTile:
         return False
 
 
+# FIXED: Use seed to ensure consistent tile placement
+_SPECIAL_TILES_CACHE = None
+
 def create_special_tiles():
     """Create all special tiles for the middle section"""
+    global _SPECIAL_TILES_CACHE
+    
+    # Return cached tiles if they exist (prevents regeneration)
+    if _SPECIAL_TILES_CACHE is not None:
+        return _SPECIAL_TILES_CACHE.copy()
+    
     tiles = {}
+    
+    # Use fixed seed for consistent placement
+    random.seed(42)  # Fixed seed = same layout every time
     
     # Get all positions in middle 4 rows (rows 3-6)
     middle_positions = []
@@ -61,24 +73,35 @@ def create_special_tiles():
     # Randomly select positions for special tiles
     selected_positions = random.sample(middle_positions, 12)
     
-    # 3 Elevated positions (C in ASCII)
+    # 3 Elevated positions
     for i in range(3):
         pos = selected_positions[i]
         tiles[pos] = SpecialTile('elevated', pos)
     
-    # 2 Cover positions (P in ASCII)
+    # 2 Cover positions
     for i in range(3, 5):
         pos = selected_positions[i]
         tiles[pos] = SpecialTile('cover', pos)
     
-    # 4 Sensor positions (R in ASCII)
+    # 4 Sensor positions
     for i in range(5, 9):
         pos = selected_positions[i]
         tiles[pos] = SpecialTile('sensor', pos)
     
-    # 3 Goldmine positions (Y in ASCII)
+    # 3 Goldmine positions
     for i in range(9, 12):
         pos = selected_positions[i]
         tiles[pos] = SpecialTile('goldmine', pos)
     
+    # Reset random seed
+    random.seed()
+    
+    # Cache the tiles
+    _SPECIAL_TILES_CACHE = tiles.copy()
+    
     return tiles
+
+def reset_special_tiles_cache():
+    """Reset cache for new game"""
+    global _SPECIAL_TILES_CACHE
+    _SPECIAL_TILES_CACHE = None

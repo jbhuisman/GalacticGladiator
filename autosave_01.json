@@ -1,0 +1,897 @@
+{
+  "timestamp": "2025-06-23T00:13:38.901771",
+  "board_size": 10,
+  "current_player": "human",
+  "game_phase": "setup",
+  "winner": null,
+  "gold_human": 0,
+  "gold_ai": 0,
+  "actions_remaining": 2,
+  "max_actions_per_turn": 2,
+  "setup_phase": "human",
+  "turn_counter": 0,
+  "board_state": {
+    "9,3": {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "ai",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        3
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,6": {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "ai",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        6
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,1": {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "ai",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        1
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,3": {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        3
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,4": {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        4
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,7": {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        7
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,8": {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        8
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,1": {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        1
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,0": {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        0
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,6": {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        6
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,2": {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "ai",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        2
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,8": {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "ai",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        8
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,2": {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "ai",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        2
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,5": {
+      "unit_type": "shield",
+      "rank": 4,
+      "owner": "ai",
+      "special_ability": "protection",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        5
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,7": {
+      "unit_type": "shield",
+      "rank": 4,
+      "owner": "ai",
+      "special_ability": "protection",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        7
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,0": {
+      "unit_type": "warlord",
+      "rank": 5,
+      "owner": "ai",
+      "special_ability": "rally",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        0
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,9": {
+      "unit_type": "warlord",
+      "rank": 5,
+      "owner": "ai",
+      "special_ability": "rally",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        9
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,4": {
+      "unit_type": "commando",
+      "rank": 6,
+      "owner": "ai",
+      "special_ability": "stealth",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        4
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "9,5": {
+      "unit_type": "commando",
+      "rank": 6,
+      "owner": "ai",
+      "special_ability": "stealth",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        5
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    "8,9": {
+      "unit_type": "flag",
+      "rank": 0,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        9
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    }
+  },
+  "special_tiles": {
+    "3,7": {
+      "tile_type": "elevated",
+      "position": [
+        3,
+        7
+      ],
+      "goldmine_turns": 0
+    },
+    "3,1": {
+      "tile_type": "elevated",
+      "position": [
+        3,
+        1
+      ],
+      "goldmine_turns": 0
+    },
+    "4,7": {
+      "tile_type": "elevated",
+      "position": [
+        4,
+        7
+      ],
+      "goldmine_turns": 0
+    },
+    "4,5": {
+      "tile_type": "cover",
+      "position": [
+        4,
+        5
+      ],
+      "goldmine_turns": 0
+    },
+    "4,4": {
+      "tile_type": "cover",
+      "position": [
+        4,
+        4
+      ],
+      "goldmine_turns": 0
+    },
+    "3,8": {
+      "tile_type": "sensor",
+      "position": [
+        3,
+        8
+      ],
+      "goldmine_turns": 0
+    },
+    "3,6": {
+      "tile_type": "sensor",
+      "position": [
+        3,
+        6
+      ],
+      "goldmine_turns": 0
+    },
+    "3,5": {
+      "tile_type": "sensor",
+      "position": [
+        3,
+        5
+      ],
+      "goldmine_turns": 0
+    },
+    "5,7": {
+      "tile_type": "sensor",
+      "position": [
+        5,
+        7
+      ],
+      "goldmine_turns": 0
+    },
+    "6,8": {
+      "tile_type": "goldmine",
+      "position": [
+        6,
+        8
+      ],
+      "goldmine_turns": 0
+    },
+    "3,0": {
+      "tile_type": "goldmine",
+      "position": [
+        3,
+        0
+      ],
+      "goldmine_turns": 0
+    },
+    "3,2": {
+      "tile_type": "goldmine",
+      "position": [
+        3,
+        2
+      ],
+      "goldmine_turns": 0
+    }
+  },
+  "human_units": [
+    {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "human",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "human",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "human",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "human",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "human",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "human",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "human",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "human",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "human",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "human",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "human",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "human",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "human",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "shield",
+      "rank": 4,
+      "owner": "human",
+      "special_ability": "protection",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "shield",
+      "rank": 4,
+      "owner": "human",
+      "special_ability": "protection",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "warlord",
+      "rank": 5,
+      "owner": "human",
+      "special_ability": "rally",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "warlord",
+      "rank": 5,
+      "owner": "human",
+      "special_ability": "rally",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "commando",
+      "rank": 6,
+      "owner": "human",
+      "special_ability": "stealth",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "commando",
+      "rank": 6,
+      "owner": "human",
+      "special_ability": "stealth",
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "flag",
+      "rank": 0,
+      "owner": "human",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": null,
+      "stealth_active": false,
+      "protected_by_shield": false
+    }
+  ],
+  "ai_units": [
+    {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "ai",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        3
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "ai",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        6
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "scout",
+      "rank": 1,
+      "owner": "ai",
+      "special_ability": "infiltration",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        1
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        3
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        4
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        7
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        8
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        1
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        0
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "infantry",
+      "rank": 2,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        6
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "ai",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        2
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "ai",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        8
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "sniper",
+      "rank": 3,
+      "owner": "ai",
+      "special_ability": "long_range",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        2
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "shield",
+      "rank": 4,
+      "owner": "ai",
+      "special_ability": "protection",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        5
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "shield",
+      "rank": 4,
+      "owner": "ai",
+      "special_ability": "protection",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        7
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "warlord",
+      "rank": 5,
+      "owner": "ai",
+      "special_ability": "rally",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        0
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "warlord",
+      "rank": 5,
+      "owner": "ai",
+      "special_ability": "rally",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        9
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "commando",
+      "rank": 6,
+      "owner": "ai",
+      "special_ability": "stealth",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        4
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "commando",
+      "rank": 6,
+      "owner": "ai",
+      "special_ability": "stealth",
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        9,
+        5
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    },
+    {
+      "unit_type": "flag",
+      "rank": 0,
+      "owner": "ai",
+      "special_ability": null,
+      "special_used": false,
+      "is_revealed": false,
+      "position": [
+        8,
+        9
+      ],
+      "stealth_active": false,
+      "protected_by_shield": false
+    }
+  ]
+}

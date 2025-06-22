@@ -1,8 +1,6 @@
 import arcade
 from config import SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE
-from controllers.MenuController import MenuController
-
-print(dir(arcade))  # This will print all attributes and methods of the "arcade" module
+from controllers.GameController import GameController
 
 
 class GameWindow(arcade.Window):
@@ -11,9 +9,9 @@ class GameWindow(arcade.Window):
     def __init__(self):
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 
-        # Start with menu controller
-        menu_controller = MenuController(self)
-        self.show_view(menu_controller.get_view())
+        # Start directly with game controller
+        game_controller = GameController(self)
+        self.show_view(game_controller.view)
 
 
 def main():

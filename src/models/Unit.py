@@ -9,6 +9,8 @@ class Unit:
         self.special_used = False
         self.is_revealed = False
         self.position = None
+        self.stealth_active = False  # For commando stealth
+        self.protected_by_shield = False  # For shield protection
 
     def can_attack(self, target):
         """Check if this unit can attack the target"""
@@ -30,12 +32,51 @@ class Unit:
         else:  # Equal ranks, defender wins
             return target
 
-    def use_special_ability(self):
+    def use_special_ability(self, game_model=None):
         """Use the unit's special ability"""
-        if not self.special_used and self.special_ability:
-            self.special_used = True
+        if self.special_used or not self.special_ability:
+            return False
+            
+        # Check if on cover tile (blocks special abilities)
+        if self.position and game_model:
+            if self.position in game_model.special_tiles:
+                tile = game_model.special_tiles[self.position]
+                if tile.blocks_special_abilities():
+                    return False
+        
+        self.special_used = True
+        
+        # Activate ability based on type
+        if self.special_ability == 'stealth':
+            self.stealth_active = True
             return True
-        return False
+        elif self.special_ability == 'protection' and game_model:
+            self._activate_shield_protection(game_model)
+            return True
+        # Other abilities are handled in GameModel
+        
+        return True
+
+    def _activate_shield_protection(self, game_model):
+        """Shield Bearer protects adjacent allied units"""
+        if not self.position:
+            return
+            
+        row, col = self.position
+        # Check all adjacent positions
+        for dr, dc in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+            new_row, new_col = row + dr, col + dc
+            adj_pos = (new_row, new_col)
+            
+            if adj_pos in game_model.board_state:
+                adjacent_unit = game_model.board_state[adj_pos]
+                if adjacent_unit.owner == self.owner:
+                    adjacent_unit.protected_by_shield = True
+
+    def reset_special_effects(self):
+        """Reset temporary special effects (called each turn)"""
+        self.stealth_active = False
+        self.protected_by_shield = False
 
     def get_display_char(self):
         """Get character to display for this unit"""
@@ -49,6 +90,17 @@ class Unit:
             'flag': 'F'
         }
         return chars.get(self.unit_type, '?')
+
+    def get_special_ability_description(self):
+        """Get description of special ability"""
+        descriptions = {
+            'infiltration': 'Kan door vijandelijke eenheden bewegen',
+            'long_range': 'Kan op afstand van 2 cellen aanvallen',
+            'protection': 'Beschermt aangrenzende bondgenoten',
+            'rally': 'Kan bondgenoten meenemen bij beweging',
+            'stealth': 'Onzichtbaar voor 1 beurt na activatie'
+        }
+        return descriptions.get(self.special_ability, 'Geen speciale vaardigheid')
 
 
 def create_unit_set(owner):
