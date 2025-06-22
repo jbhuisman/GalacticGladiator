@@ -3,7 +3,7 @@ from views.GamePane import GamePane
 
 
 class GameController:
-    """Controller for game interactions"""
+    """Controller for Galactic Gladiators game interactions"""
 
     def __init__(self, window):
         self.window = window
@@ -12,19 +12,22 @@ class GameController:
 
     def update(self, delta_time):
         """Update game state"""
-        self.model.update(delta_time)
-        self.view.update_score(self.model.get_score())
-
-    def toggle_pause(self):
-        """Toggle game pause"""
-        self.model.toggle_pause()
-        self.view.update_pause_button(self.model.is_game_paused())
+        # Game logic is handled by user actions and AI turns
+        pass
 
     def show_menu(self):
         """Return to main menu"""
         from controllers.MenuController import MenuController
         menu_controller = MenuController(self.window)
-        self.window.show_view(menu_controller.view)
+        self.window.show_view(menu_controller.get_view())
+
+    def get_board_state(self):
+        """Get current board state"""
+        return self.model.get_board_state()
+
+    def handle_cell_click(self, cell):
+        """Handle cell click on board"""
+        self.model.handle_cell_click(cell)
 
     def get_view(self):
         """Get the game view"""

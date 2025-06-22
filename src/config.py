@@ -11,4 +11,4 @@ SCREEN_TITLE = "Galactic Gladiator"
 FPS = 60
 
 # Colors
-BACKGROUND_COLOR = (200, 200, 200)  # Sky blue
+BACKGROUND_COLOR = (0, 0, 0)  # Sky blue

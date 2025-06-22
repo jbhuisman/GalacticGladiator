@@ -2,6 +2,8 @@ import arcade
 from config import SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE
 from controllers.MenuController import MenuController
 
+print(dir(arcade))  # This will print all attributes and methods of the "arcade" module
+
 
 class GameWindow(arcade.Window):
     """Main application window"""
